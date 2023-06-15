@@ -1,0 +1,46 @@
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu{
+    background-color:rgb(127, 127, 219);
+    width: 180px;
+    height: 100vh;
+    box-shadow: 3px 3px 3px gray;
+}
+.menu ul{
+    list-style: none;
+    margin: 0px;
+    color: white;
+    font-size: 20px;
+    padding: 0px;
+    font-weight: 600;
+}
+
+.imageArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+
+
+.menu li{
+    text-indent: 20px;
+    padding: 10px 5px;
+    border-bottom: 1px solid white;
+    transition: 0.7s;
+}
+
+.menu li:hover{
+    background-color: white;
+    color: rgb(127, 127, 219);
+    transition: 0.7s;
+}
+
+.menu_icon{
+    height: 15px;
+    margin-right: 5px;
+}
