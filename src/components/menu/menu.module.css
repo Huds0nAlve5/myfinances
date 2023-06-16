@@ -29,6 +29,13 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 70px;
+    transition: 0.7s;
+}
+
+.imageArea:hover{
+    background-image: url("../../../public/logo/logo-inverso.png");
+    background-color: white;
+    transition: 0.7s;
 }
 
 
