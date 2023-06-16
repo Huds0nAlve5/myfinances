@@ -9,12 +9,7 @@ export default function MenuVertical() {
             <nav className={styles.menu}>
                 <Link href="/">
                     <div className={styles.imageArea}>
-                        <Image 
-                        src="/logo/logo1.png"
-                        width={100}
-                        height={70}
-                        alt="myfinances"
-                        />
+                     
                     </div>
                 </Link>
                 <ul>

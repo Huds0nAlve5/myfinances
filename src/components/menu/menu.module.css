@@ -24,6 +24,11 @@
     justify-content: center;    
     border-bottom: 1px solid white;
     padding: 10px;
+    background-image: url("../../../public/logo/logo1.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px;
 }
 
 
