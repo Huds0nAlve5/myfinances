@@ -3,27 +3,15 @@ import style from './page.module.css'
 import BlueButton from '@/components/form/button/BlueButton'
 import List from '@/components/list/List'
 
-export default function page() {
-    const listaContas = [
-        {
-            'acccod' : '1',
-            'conta' : 'nubank',
-            'saldo': '100'
-        },
-
-        {
-            'acccod' : '2',
-            'conta' : 'inter',
-            'saldo': '2,50'
-        }
-    ]
+export default async function page() {
+    const listaContas = await fetch('/api')
 
     return (
         <>
         <div className={style.corpo}>
             <div className={style.buscar_e_inserir}>
                 <InputPlaceHolder type="text" name="accname" text="Buscar conta bancária" placeholder="Buscar conta"/>
-                <BlueButton type="button" value="Inserir conta"/>
+                <BlueButton type="button" value="Inserir conta" href="/contas/new"/>
             </div>
 
             <List listagem={listaContas} />
