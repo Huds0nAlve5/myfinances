@@ -2,10 +2,10 @@ import InputPlaceHolder from '@/components/form/input/InputPlaceHolder'
 import style from './page.module.css'
 import BlueButton from '@/components/form/button/BlueButton'
 import List from '@/components/list/List'
+import { getContas } from '../../../prisma/controllers/conta'
 
 export default async function page() {
-    const listaContas = await fetch('/api')
-
+    const listagemContas = await getContas()
     return (
         <>
         <div className={style.corpo}>
@@ -14,7 +14,7 @@ export default async function page() {
                 <BlueButton type="button" value="Inserir conta" href="/contas/new"/>
             </div>
 
-            <List listagem={listaContas} />
+            <List listagem={listagemContas} />
         </div>
         </>
     )

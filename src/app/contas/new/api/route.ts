@@ -1,19 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
-export async function GET(req:NextRequest, res:NextResponse) {
-    const listaContas = [
-        {
-            'acccod' : '1',
-            'conta' : 'nubank',
-            'saldo': '100'
-        },
+export async function POST(req: Request) {
+    const contas = await req.json()
+    const {conta, saldo} = contas
 
-        {
-            'acccod' : '2',
-            'conta' : 'inter',
-            'saldo': '2,50'
-        }
-    ]
-
-    return NextResponse.json(listaContas)
+    return NextResponse.json({conta, saldo})
   }

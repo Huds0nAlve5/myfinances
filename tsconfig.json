@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/contas/new/api/route.ts", "prisma/prismaClient.ts", "prisma/controllers/conta/get.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/contas/new/api/route.ts", "prisma/prismaClient.ts", "prisma/controllers/conta.ts"],
   "exclude": ["node_modules"]
 }
