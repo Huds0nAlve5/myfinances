@@ -8,7 +8,7 @@ export default function List({listagem}:any) {
                     <tr>
                         {Object.keys(listagem[0]).map(
                             (item, i) => i != 0 ? 
-                            <th className={style.capitalize}>{item}</th> 
+                            <th className={style.capitalize} key={i}>{item}</th> 
                             : "")}
                     </tr>
                 </thead>

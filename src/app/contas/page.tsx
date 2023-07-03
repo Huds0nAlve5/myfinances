@@ -3,8 +3,26 @@ import style from './page.module.css'
 import BlueButton from '@/components/form/button/BlueButton'
 import List from '@/components/list/List'
 import { getContas } from '../../../prisma/controllers/conta'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 
-export default async function page() {
+type Conta = {
+    conta: string,
+    saldo: number
+}
+
+export const getServerSideProps:GetServerSideProps<{conta: Conta}> = async() => {
+    const res = await fetch('https://api.github.com/repos/vercel/next.js')
+    const conta = await res.json()
+
+    console.log(1)
+    return {
+        props: { conta }
+    }
+};
+
+export default async function page({
+    conta,
+  }: InferGetServerSidePropsType<typeof getServerSideProps>) {
     const listagemContas = await getContas()
     return (
         <>
@@ -15,6 +33,7 @@ export default async function page() {
             </div>
 
             <List listagem={listagemContas} />
+            {conta.saldo}
         </div>
         </>
     )
