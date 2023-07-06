@@ -1,7 +1,7 @@
 import style from './bluebutton.module.css'
 
-export default function BlueButton({type, value, href}:any) {
+export default function BlueButton({type, value, href, event}:any) {
     return(
-        <a href={href}><button type={type} className={style.bluebutton}>{value}</button></a>
+        <a href={href}><button type={type} className={style.bluebutton} onClick={event}>{value}</button></a>
     )
 };
