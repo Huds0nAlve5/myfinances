@@ -3,6 +3,7 @@ import style from './list.module.css'
 export default function List({listagem}:any) {
     return (
         <>
+            {listagem.length > 0 ?
             <table style={{backgroundColor: "red"}}>
                 <thead>
                     <tr>
@@ -24,6 +25,9 @@ export default function List({listagem}:any) {
 
                 </tbody>
             </table>
+            :
+                "Não há dados"
+            }
         </>
     )
 };
