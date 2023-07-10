@@ -9,6 +9,16 @@ export default function page() {
     const [conta, setConta] = useState<string>()
     const [saldo, setSaldo] = useState<number>()
 
+    const limparCampos = () => {
+        const inputs = document.getElementsByTagName("input")
+        for(let i = 0; i < inputs.length; i++){
+            inputs[i].value = ""
+        }
+        
+        setSaldo(0)
+        setConta("")
+    }
+
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         
@@ -23,6 +33,8 @@ export default function page() {
                 }
             )
         })
+
+        limparCampos()
     }
 
     return(
