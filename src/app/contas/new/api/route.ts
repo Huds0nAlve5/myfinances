@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const contas = await req.json()
     const {conta, saldo} = contas
 
-    await setConta(conta, saldo)
+    await setConta(conta, parseFloat(saldo))
 
     return NextResponse.json({conta, saldo})
   }

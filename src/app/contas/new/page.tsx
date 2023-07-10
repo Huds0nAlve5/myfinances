@@ -6,11 +6,10 @@ import { FormEvent } from "react";
 import { useState } from "react";
 
 export default function page() {
-    const [conta, setConta] = useState()
-    const [saldo, setSaldo] = useState()
+    const [conta, setConta] = useState<string>()
+    const [saldo, setSaldo] = useState<number>()
 
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
-        window.alert([conta, saldo])
         e.preventDefault()
         
         const res = await fetch("http://localhost:3000/contas/new/api", {
@@ -30,7 +29,7 @@ export default function page() {
         <>
             <form method="post" action="/contas/new/api">
                 <InputLabel type="text" name="conta" text="Conta" setData={setConta}/>
-                <InputLabel type="text" name="saldo" text="Saldo" setData={setSaldo}/>
+                <InputLabel type="number" name="saldo" text="Saldo" setData={setSaldo}/>
                 <BlueButton type="submit" value="Cadastrar" event={handleSubmit}/>
             </form>
         </>

@@ -4,11 +4,6 @@ import BlueButton from '@/components/form/button/BlueButton'
 import List from '@/components/list/List'
 import { getContas } from '../../../prisma/controllers/conta'
 
-type Conta = {
-    conta: string,
-    saldo: number
-}
-
 export default async function page(){
     const listagemContas = await getContas()
     return (

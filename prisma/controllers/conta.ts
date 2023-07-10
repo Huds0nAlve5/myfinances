@@ -5,7 +5,7 @@ export async function getContas() {
 }
 
 export async function setConta(conta:string, saldo:number) {
-    prismaClient.conta.create({
+    await prismaClient.conta.create({
         data: {
             conta,
             saldo
