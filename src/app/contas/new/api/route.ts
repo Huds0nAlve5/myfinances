@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server'
+import { setConta } from '../../../../../prisma/controllers/conta'
 
 export async function POST(req: Request) {
-    console.log(req)
     const contas = await req.json()
     const {conta, saldo} = contas
+
+    await setConta(conta, saldo)
 
     return NextResponse.json({conta, saldo})
   }

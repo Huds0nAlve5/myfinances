@@ -10,14 +10,27 @@ export default function page() {
     const [saldo, setSaldo] = useState()
 
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
+        window.alert([conta, saldo])
         e.preventDefault()
+        
+        const res = await fetch("http://localhost:3000/contas/new/api", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(
+                {
+                    conta, saldo
+                }
+            )
+        })
     }
 
     return(
         <>
             <form method="post" action="/contas/new/api">
-                <InputLabel type="text" name="conta" text="Conta"/>
-                <InputLabel type="text" name="saldo" text="Saldo"/>
+                <InputLabel type="text" name="conta" text="Conta" setData={setConta}/>
+                <InputLabel type="text" name="saldo" text="Saldo" setData={setSaldo}/>
                 <BlueButton type="submit" value="Cadastrar" event={handleSubmit}/>
             </form>
         </>

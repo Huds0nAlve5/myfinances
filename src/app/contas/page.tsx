@@ -16,7 +16,7 @@ export default async function page(){
             <div className={style.corpo}>
                 <div className={style.buscar_e_inserir}>
                     <InputPlaceHolder type="text" name="accname" text="Buscar conta bancária" placeholder="Buscar conta"/>
-                    <BlueButton type="button" value="Inserir conta" href="/contas/new"/>
+                    <BlueButton type="button" value="Inserir conta"/>
                 </div>
 
                 <List listagem={listagemContas} />
