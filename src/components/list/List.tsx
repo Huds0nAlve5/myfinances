@@ -18,7 +18,7 @@ export default function List({listagem}:any) {
                             return (
                                 <tr>
                                     <td key={Object.values(item)[0]}>{Object.values(item)[1]}</td>
-                                    <td key={Object.values(item)[0]}>{Object.values(item)[2]}</td>
+                                    <td key={Object.values(item)[1]}>{Object.values(item)[2]}</td>
                                 </tr>
                             )
                         })}
