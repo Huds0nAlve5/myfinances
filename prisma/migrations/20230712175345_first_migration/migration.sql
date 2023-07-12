@@ -2,7 +2,7 @@
 CREATE TABLE `contas` (
     `codigo` INTEGER NOT NULL AUTO_INCREMENT,
     `conta` VARCHAR(191) NOT NULL,
-    `saldo` DOUBLE NOT NULL,
+    `saldo` DECIMAL(6, 2) NOT NULL,
 
     PRIMARY KEY (`codigo`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -10,7 +10,7 @@ CREATE TABLE `contas` (
 -- CreateTable
 CREATE TABLE `receitas` (
     `codigo` INTEGER NOT NULL AUTO_INCREMENT,
-    `valor` DOUBLE NOT NULL,
+    `saldo` DECIMAL(6, 2) NOT NULL,
     `data_inclusao` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `conta_id` INTEGER NOT NULL,
 
@@ -20,7 +20,7 @@ CREATE TABLE `receitas` (
 -- CreateTable
 CREATE TABLE `despesas` (
     `codigo` INTEGER NOT NULL AUTO_INCREMENT,
-    `valor` DOUBLE NOT NULL,
+    `saldo` DECIMAL(6, 2) NOT NULL,
     `data_inclusao` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `conta_id` INTEGER NOT NULL,
 

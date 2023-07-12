@@ -13,7 +13,7 @@ datasource db {
 model Conta {
   codigo Int @id @default(autoincrement())
   conta String 
-  valor Decimal @db.Decimal(10, 2)
+  saldo Decimal @db.Decimal(6, 2)
   receitas Receita[]
   despesas Despesa[]
 
@@ -22,7 +22,7 @@ model Conta {
 
 model Receita {
   codigo Int @id @default(autoincrement())
-  valor Decimal @db.Decimal(10, 2)
+  saldo Decimal @db.Decimal(6, 2)
   data_inclusao DateTime @default(now())
   conta Conta @relation(fields: [conta_id], references: [codigo])
   conta_id Int
@@ -32,7 +32,7 @@ model Receita {
 
 model Despesa {
   codigo Int @id @default(autoincrement())
-  valor Decimal @db.Decimal(10, 2)
+  saldo Decimal @db.Decimal(6, 2)
   data_inclusao DateTime @default(now())
   conta Conta @relation(fields: [conta_id], references: [codigo])
   conta_id Int
