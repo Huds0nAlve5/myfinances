@@ -1,13 +1,15 @@
 export default function InputLabel({type, name, text, setData}: any) {
+    if (typeof document !== 'undefined'){
     const saldo = document.getElementById('saldo') as HTMLInputElement;
-    saldo?.addEventListener('change', function() {
-        var v = parseFloat(this.value);
-        if (isNaN(v)) {
-            this.value = '';
-        } else {
-            this.value = v.toFixed(2);
-        }
-    });
+        saldo?.addEventListener('change', function() {
+            var v = parseFloat(this.value);
+            if (isNaN(v)) {
+                this.value = '';
+            } else {
+                this.value = v.toFixed(2);
+            }
+        });
+    }
 
     if(type == "number" && name == "saldo"){
         return (
