@@ -21,7 +21,6 @@ export default function page() {
 
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const saldoFormatado:string = Number(saldo).toFixed(2)
         
         const res = await fetch("http://localhost:3000/contas/new/api", {
             method: 'POST',
@@ -30,7 +29,7 @@ export default function page() {
             },
             body: JSON.stringify(
                 {
-                    conta, saldo: saldoFormatado
+                    conta, saldo
                 }
             )
         })
