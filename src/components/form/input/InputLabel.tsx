@@ -14,10 +14,9 @@ export default function InputLabel({type, name, text, setData}: any) {
             }
         });
 
-
         saldo?.addEventListener('keypress', function(e){
             const char = e.key
-
+            
             if(!char.match(pattern)){
                 e.preventDefault()
             }
