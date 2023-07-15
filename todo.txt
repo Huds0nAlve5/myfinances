@@ -1,0 +1,5 @@
+-- fixar menu lateral na rolagem
+-- ajustar o input de Saldo
+-- fazer validação antes do post
+-- fazeer conferencia se a operação foi concluida ou nao e dar a notificação
+-- fazer css dos formularios

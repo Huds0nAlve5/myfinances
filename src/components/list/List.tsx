@@ -4,7 +4,7 @@ export default function List({listagem}:any) {
     return (
         <>
             {listagem.length > 0 ?
-            <table style={{backgroundColor: "red"}}>
+            <table className={style.tabela}>
                 <thead>
                     <tr>
                         {Object.keys(listagem[0]).map(
