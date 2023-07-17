@@ -4,6 +4,7 @@ import BlueButton from "@/components/form/button/BlueButton";
 import InputLabel from "@/components/form/input/InputLabel";
 import { FormEvent } from "react";
 import { useState } from "react";
+import style from "./page.module.css"
 
 export default function page() {
     const [conta, setConta] = useState<string>()
@@ -39,7 +40,7 @@ export default function page() {
 
     return(
         <>
-            <form method="post" action="/contas/new/api">
+            <form method="post" action="/contas/new/api" className={style.formulario}>
                 <InputLabel type="text" name="conta" text="Conta" setData={setConta}/>
                 <InputLabel type="number" name="saldo" text="Saldo" setData={setSaldo}/>
                 <BlueButton type="submit" value="Cadastrar" event={handleSubmit}/>

@@ -25,7 +25,7 @@ export default function InputLabel({type, name, text, setData}: any) {
 
     if(type == "number" && name == "saldo"){
         return (
-            <label htmlFor="input">{text}
+            <label htmlFor="input" className={style.label}>{text}<br/>
                 <input type={type} name={name} onChange={(e) => setData(Number(e.target.value).toFixed(2))} className={style.input} id="saldo"/>
             </label>
         )
@@ -33,7 +33,7 @@ export default function InputLabel({type, name, text, setData}: any) {
 
     else{
         return (
-            <label htmlFor="input">{text}
+            <label htmlFor="input" className={style.label}>{text}<br/>
                 <input type={type} name={name} onChange={(e) => setData(e.target.value)} className={style.input}/>
             </label>
         )
