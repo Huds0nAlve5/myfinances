@@ -1,5 +1,6 @@
 .buscar_e_inserir{
-    margin: 30px auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 470px;
     display: flex;
     justify-content: space-between;

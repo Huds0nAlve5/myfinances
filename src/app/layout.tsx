@@ -15,7 +15,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={style.body}>
         <Menu />
-        {children}
+        <div className={style.centralizar_corpo}>
+          {children}
+        </div>
       </body>
     </html>
   )

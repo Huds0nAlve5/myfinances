@@ -4,6 +4,7 @@
 }
 
 .menu{
+    position: fixed;
     background-color:rgb(127, 127, 219);
     width: 180px;
     height: 100vh;
