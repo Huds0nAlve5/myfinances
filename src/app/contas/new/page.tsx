@@ -5,11 +5,23 @@ import InputLabel from "@/components/form/input/InputLabel";
 import { FormEvent } from "react";
 import { useState } from "react";
 import style from "./page.module.css"
+import { useEffect } from "react";
+
+var disabled:boolean = true
 
 export default function page() {
     const [conta, setConta] = useState<string>()
     const [saldo, setSaldo] = useState<number>()
 
+    
+    useEffect(() => {
+        if((conta?.length == 0) || (saldo == undefined))
+            disabled = true
+        else
+            disabled = false
+        console.log(disabled, conta?.length, saldo)
+    }, [conta, saldo])
+    
     const limparCampos = () => {
         const inputs = document.getElementsByTagName("input")
         for(let i = 0; i < inputs.length; i++){
@@ -43,7 +55,7 @@ export default function page() {
             <form method="post" action="/contas/new/api" className={style.formulario}>
                 <InputLabel type="text" name="conta" text="Conta" setData={setConta}/>
                 <InputLabel type="number" name="saldo" text="Saldo" setData={setSaldo}/>
-                <BlueButton type="submit" value="Cadastrar" event={handleSubmit}/>
+                <BlueButton type="submit" value="Cadastrar" event={handleSubmit} disabled={disabled}/>
             </form>
         </>
     )

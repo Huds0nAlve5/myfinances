@@ -14,3 +14,8 @@
     transition: 0.7s;
     cursor: pointer;
 }
+
+.bluebutton:disabled{
+    background-color: rgb(97, 97, 119);
+    cursor: default;
+}
