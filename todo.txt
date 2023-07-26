@@ -1,6 +1,7 @@
 OK! -- fixar menu lateral na rolagem
--- fazer css dos formularios
 -- desabilitar botao quando os inputs nao estão preenchidos
+-- fazer css dos formularios
+-- fazer adaptação para mobile
 -- ajustar a tabela com as listas
 -- ajustar o input de Saldo
 -- fazer validação antes do post

@@ -7,18 +7,33 @@ import { useState } from "react";
 import style from "./page.module.css"
 import { useEffect } from "react";
 
+interface ButtonHTMLAttributes extends HTMLElement {
+    autoFocus?: boolean | undefined;
+    disabled?: boolean | undefined;
+    form?: string | undefined;
+    formAction?: string | undefined;
+    formEncType?: string | undefined;
+    formMethod?: string | undefined;
+    formNoValidate?: boolean | undefined;
+    formTarget?: string | undefined;
+    name?: string | undefined;
+    type?: 'submit' | 'reset' | 'button' | undefined;
+    value?: string | ReadonlyArray<string> | number | undefined;
+}
+
 var disabled:boolean = true
 
 export default function page() {
     const [conta, setConta] = useState<string>()
     const [saldo, setSaldo] = useState<number>()
 
-    
     useEffect(() => {
-        if((conta?.length == 0) || (saldo == undefined))
-            disabled = true
+        const botao:ButtonHTMLAttributes | null = document.getElementById("botao")
+
+        if(((conta?.length == 0) || conta == undefined)|| (saldo == undefined))
+            botao!.disabled = true
         else
-            disabled = false
+            botao!.disabled = false
         console.log(disabled, conta?.length, saldo)
     }, [conta, saldo])
     
@@ -55,7 +70,7 @@ export default function page() {
             <form method="post" action="/contas/new/api" className={style.formulario}>
                 <InputLabel type="text" name="conta" text="Conta" setData={setConta}/>
                 <InputLabel type="number" name="saldo" text="Saldo" setData={setSaldo}/>
-                <BlueButton type="submit" value="Cadastrar" event={handleSubmit} disabled={disabled}/>
+                <BlueButton type="submit" value="Cadastrar" event={handleSubmit}/>
             </form>
         </>
     )
