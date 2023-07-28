@@ -6,6 +6,7 @@ import { FormEvent } from "react";
 import { useState } from "react";
 import style from "./page.module.css"
 import { useEffect } from "react";
+import { text } from "node:stream/consumers";
 
 interface ButtonHTMLAttributes extends HTMLElement {
     autoFocus?: boolean | undefined;
@@ -21,8 +22,6 @@ interface ButtonHTMLAttributes extends HTMLElement {
     value?: string | ReadonlyArray<string> | number | undefined;
 }
 
-var disabled:boolean = true
-
 export default function page() {
     const [conta, setConta] = useState<string>()
     const [saldo, setSaldo] = useState<number>()
@@ -34,7 +33,7 @@ export default function page() {
             botao!.disabled = true
         else
             botao!.disabled = false
-        console.log(disabled, conta?.length, saldo)
+
     }, [conta, saldo])
     
     const limparCampos = () => {

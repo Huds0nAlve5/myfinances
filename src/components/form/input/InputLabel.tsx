@@ -3,8 +3,9 @@ import style from './Input.module.css'
 export default function InputLabel({type, name, text, setData}: any) {
     if (typeof document !== 'undefined'){
         const saldo = document.getElementById('saldo') as HTMLInputElement;
-        const pattern = '[0-9,]'   
-    
+        const patternAcc = '[0-9,]'
+        const patternLimit = "[0-9]*[\.][0-9]{2}"   
+
         saldo?.addEventListener('change', function() {
             var v = parseFloat(this.value);
             if (isNaN(v)) {
@@ -13,11 +14,11 @@ export default function InputLabel({type, name, text, setData}: any) {
                 this.value = v.toFixed(2);
             }
         });
-
-        saldo?.addEventListener('keypress', function(e){
+        
+        saldo?.addEventListener('keypress', function(e){  
             const char = e.key
-            
-            if(!char.match(pattern)){
+
+            if(saldo.value.match(patternLimit) || !char.match(patternAcc)){
                 e.preventDefault()
             }
         });
@@ -26,7 +27,7 @@ export default function InputLabel({type, name, text, setData}: any) {
     if(type == "number" && name == "saldo"){
         return (
             <label htmlFor="input" className={style.label}>{text}<br/>
-                <input type={type} name={name} onChange={(e) => setData(Number(e.target.value).toFixed(2))} className={style.input} id="saldo" placeholder='0.00'/>
+                <input type={type} name={name} onChange={(e) => setData(Number(e.target.value).toFixed(2))} className={style.input} id="saldo" placeholder='0,00' defaultValue={"0.00"}/>
             </label>
         )
     }

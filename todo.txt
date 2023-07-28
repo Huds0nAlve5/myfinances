@@ -1,8 +1,7 @@
 OK! -- fixar menu lateral na rolagem
--- desabilitar botao quando os inputs nao estão preenchidos
+OK! -- desabilitar botao quando os inputs nao estão preenchidos
+OK! -- ajustar o input de Saldo
 -- fazer css dos formularios
 -- fazer adaptação para mobile
 -- ajustar a tabela com as listas
--- ajustar o input de Saldo
--- fazer validação antes do post
--- fazeer conferencia se a operação foi concluida ou nao e dar a notificação
+-- fazer conferencia se a operação foi concluida ou nao e dar a notificação
