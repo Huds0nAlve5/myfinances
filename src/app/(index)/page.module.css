@@ -6,4 +6,33 @@
 .centralizar_corpo{
     display: flex;
     justify-content: center;
+    margin-left: 8em;
+    height: 100vh;
 }
+
+/* 320px - 480px = mobile */
+/* Em mobile first não precisa de MQ */
+.centralizar_corpo{
+    margin-left: 8em;
+}
+  
+  /* 480px - 768px = tablet */
+  @media (min-width: 480px) {
+    .centralizar_corpo{
+        margin-left: 100px;
+    }
+  }
+  
+  /* 768px - 1024px = telas menores, laptops */
+  @media (min-width: 768px) {
+    .centralizar_corpo{
+        margin-left: 175px;
+    }
+  }
+  
+  /* 1024px - 1200px = desktop */
+  @media (min-width: 1024px) {
+    .centralizar_corpo{
+        margin-left: 175px;
+    }
+  }
