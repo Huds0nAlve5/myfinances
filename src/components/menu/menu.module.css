@@ -6,15 +6,15 @@
 .menu{
     position: fixed;
     background-color:rgb(127, 127, 219);
-    width: 200px;
-    height: 100vh;
+    width: 8em;
+    height: 200vh;
     box-shadow: 3px 3px 3px gray;
 }
 .menu ul{
     list-style: none;
     margin: 0px;
     color: white;
-    font-size: 20px;
+    font-size: 1em;
     padding: 0px;
     font-weight: 600;
 }
@@ -24,12 +24,12 @@
     align-items: center;
     justify-content: center;    
     border-bottom: 1px solid white;
-    padding: 10px;
+    padding: 1em;
     background-image: url("../../../public/logo/logo1.png");
-    background-size: 100px;
+    background-size: 6em;
     background-repeat: no-repeat;
     background-position: center;
-    height: 70px;
+    height: 4em;
     transition: 0.7s;
 }
 
@@ -39,9 +39,7 @@
     transition: 0.7s;
 }
 
-
 .menu li{
-    text-indent: 40px;
     padding: 10px 5px;
     border-bottom: 1px solid white;
     transition: 0.7s;
@@ -56,4 +54,191 @@
 .menu_icon{
     height: 15px;
     margin-right: 5px;
+}
+
+/* 480px - 768px = tablet */
+@media (min-width: 480px) {
+    .link{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .menu{
+        position: fixed;
+        background-color:rgb(127, 127, 219);
+        width: 100px;
+        height: 100vh;
+        box-shadow: 3px 3px 3px gray;
+    }
+    .menu ul{
+        list-style: none;
+        margin: 0px;
+        color: white;
+        font-size: 1em;
+        padding: 0px;
+        font-weight: 600;
+    }
+    
+    .imageArea{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        border-bottom: 1px solid white;
+        padding: 1em;
+        background-image: url("../../../public/logo/logo1.png");
+        background-size: 6em;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 4em;
+        transition: 0.7s;
+    }
+    
+    .imageArea:hover{
+        background-image: url("../../../public/logo/logo-inverso.png");
+        background-color: white;
+        transition: 0.7s;
+    }
+    
+    .menu li{
+        padding: 10px 5px;
+        border-bottom: 1px solid white;
+        transition: 0.7s;
+    }
+    
+    .menu li:hover{
+        background-color: white;
+        color: rgb(127, 127, 219);
+        transition: 0.7s;
+    }
+    
+    .menu_icon{
+        height: 15px;
+        margin-right: 5px;
+    }
+}
+  
+  /* 768px - 1024px = telas menores, laptops */
+@media (min-width: 768px) {
+    .link{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .menu{
+        position: fixed;
+        background-color:rgb(127, 127, 219);
+        width: 200px;
+        height: 100vh;
+        box-shadow: 3px 3px 3px gray;
+    }
+    .menu ul{
+        list-style: none;
+        margin: 0px;
+        color: white;
+        font-size: 20px;
+        padding: 0px;
+        font-weight: 600;
+    }
+
+    .imageArea{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        border-bottom: 1px solid white;
+        padding: 10px;
+        background-image: url("../../../public/logo/logo1.png");
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 70px;
+        transition: 0.7s;
+    }
+
+    .imageArea:hover{
+        background-image: url("../../../public/logo/logo-inverso.png");
+        background-color: white;
+        transition: 0.7s;
+    }
+
+
+    .menu li{
+        text-indent: 40px;
+        padding: 10px 5px;
+        border-bottom: 1px solid white;
+        transition: 0.7s;
+    }
+
+    .menu li:hover{
+        background-color: white;
+        color: rgb(127, 127, 219);
+        transition: 0.7s;
+    }
+
+    .menu_icon{
+        height: 15px;
+        margin-right: 5px;
+    }
+}
+  
+  /* 1024px - 1200px = desktop */
+@media (min-width: 1024px) {
+    .link{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .menu{
+        position: fixed;
+        background-color:rgb(127, 127, 219);
+        width: 200px;
+        height: 100vh;
+        box-shadow: 3px 3px 3px gray;
+    }
+    .menu ul{
+        list-style: none;
+        margin: 0px;
+        color: white;
+        font-size: 20px;
+        padding: 0px;
+        font-weight: 600;
+    }
+
+    .imageArea{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        border-bottom: 1px solid white;
+        padding: 10px;
+        background-image: url("../../../public/logo/logo1.png");
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 70px;
+        transition: 0.7s;
+    }
+
+    .imageArea:hover{
+        background-image: url("../../../public/logo/logo-inverso.png");
+        background-color: white;
+        transition: 0.7s;
+    }
+
+
+    .menu li{
+        text-indent: 40px;
+        padding: 10px 5px;
+        border-bottom: 1px solid white;
+        transition: 0.7s;
+    }
+
+    .menu li:hover{
+        background-color: white;
+        color: rgb(127, 127, 219);
+        transition: 0.7s;
+    }
+
+    .menu_icon{
+        height: 15px;
+        margin-right: 5px;
+    }
 }
