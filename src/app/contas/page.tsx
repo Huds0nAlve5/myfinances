@@ -3,7 +3,6 @@ import style from './page.module.css'
 import BlueButton from '@/components/form/button/BlueButton'
 import List from '@/components/list/List'
 import { getContas } from '../../../prisma/controllers/conta'
-
 export default async function page(){
     const listagemContas = await getContas()
     return (

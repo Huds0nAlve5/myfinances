@@ -6,7 +6,7 @@
 .menu{
     position: fixed;
     background-color:rgb(127, 127, 219);
-    width: 8em;
+    width: 120px;
     height: 200vh;
     box-shadow: 3px 3px 3px gray;
 }
@@ -59,7 +59,7 @@
 /* 480px - 768px = tablet */
 @media (min-width: 480px) {
     .menu{
-        width: 100px;
+        width: 125px;
         height: 100vh;
     }
 
@@ -88,17 +88,5 @@
   
   /* 1024px - 1200px = desktop */
 @media (min-width: 1024px) {
-    .menu{
-        width: 175px;
-        height: 100vh;
-    }
 
-    .menu li{
-        text-indent: 30px;
-        font-size: 19px;
-    }
-
-    .menu_icon{
-        height: 15px;
-    }
 }
