@@ -20,7 +20,7 @@ export default function List({listagem}:any) {
                             return (
                                 <tr>
                                     <td key={Object.values(item)[0]}>{Object.values(item)[1]}</td>
-                                    <td key={Object.values(item)[1]}>R$ {Object.values(item)[2]}</td>
+                                    <td key={Object.values(item)[1]}>R${Number(Object.values(item)[2]).toFixed(2).replace(".",",")}</td>
                                     <td><FaEdit/> <FaRegTimesCircle/></td>
                                 </tr>
                             )

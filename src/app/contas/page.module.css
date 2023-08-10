@@ -1,8 +1,36 @@
 .buscar_e_inserir{
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 370px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 250px;
+    display: block;
+    text-align: center;
 }
+
+.buscar_e_inserir input{
+    margin-bottom: 10px;    
+}
+
+  /* 480px - 768px = tablet */
+  @media (min-width: 565px) {
+    .buscar_e_inserir{
+        width: 370px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .buscar_e_inserir input{
+        margin-bottom: 0px;    
+    }
+  }
+  
+  /* 768px - 1024px = telas menores, laptops */
+  @media (min-width: 768px) {
+
+  }
+  
+  /* 1024px - 1200px = desktop */
+  @media (min-width: 1024px) {
+    
+  }
+  
